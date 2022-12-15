@@ -1,5 +1,6 @@
 # import library - seqinr
 
+install.packages("seqinr")
 library(seqinr)
 choosebank()
 choosebank("genbank")
@@ -32,3 +33,17 @@ message("Length of sequence : ",lenSequence)
 
 contentGC <- ((seqTable[[2]] + seqTable[[3]])/lenSequence) * 100
 message("G-C Content : ",contentGC)
+
+# Working with protein sequence
+
+myseq <- 
+  "MTMDKSELVQKAKLAEQAERYDDMAAAMKAVTEQGHELSNEERNLLSVAYKNVVGARRSSWR
+VISSIEQKTERNEKKQQMGKEYREKIEAELQDICNDVLELLDKYLIPNATQPESKVFYLKMK
+GDYFRYLSEVASGDNKQTTVSNQQAYQEAFEISKKEMQPTHPIRLGLALNFSVFYYEILNS
+PEKACSLAKTAFDEAIAELDTLNEESYKDSTLIMQLLRDNLTWTSENQGDEGENLYFQ"
+
+
+myseq <- s2c(myseq)   # string to c() 
+myseq
+
+table(myseq)

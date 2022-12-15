@@ -36,4 +36,29 @@ for (i in 1:length(nset)) {
   }
 }
 
+# Return A,T,G,C counts
+
+message("Adenine Count : ",countA)
+message("Thymine Count : ",countT)
+message("Guanine Count : ",countG)
+message("Cytosine Count : ",countC)
+
+# G-C content
+
+totalBase = countA + countT + countG + countC
+
+contentGC = ((countG+countC)/totalBase) * 100
+
+message("G-C Content : ",contentGC)
+
+
+
+
+
+
+
+
+
+
+
 
